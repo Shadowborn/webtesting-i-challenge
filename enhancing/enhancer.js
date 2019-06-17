@@ -13,8 +13,11 @@ function fail(item) {
   return { ...item };
 }
 
+// enhancer repair should make durabiity 100
 function repair(item) {
-  return { ...item };
+  item = { ...item, durability: 100 }
+
+  return item;
 }
 
 function get(item) {

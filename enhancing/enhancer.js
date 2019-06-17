@@ -6,11 +6,11 @@ module.exports = {
 };
 
 function succeed(item) {
-  return { ...item };
-}
-
-function fail(item) {
-  return { ...item };
+  let enhancement = item.enhancement;
+  if (enhancement < 20) {
+    enhancement++;
+  }
+  return { ...item, enhancement };
 }
 
 // enhancer repair should make durabiity 100
